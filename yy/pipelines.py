@@ -24,7 +24,7 @@ class MysqlPipeline(object):
     """
     def __init__(self):
         # 建立连接
-        self.conn = pymysql.connect('192.168.123.100','root','qzk7lWeyL4','spider')  # 有中文要存入数据库的话要加charset='utf8'
+        self.conn = pymysql.connect('192.168.123.100:32109','root','qzk7lWeyL4','spider')  # 有中文要存入数据库的话要加charset='utf8'
         # 创建游标
         self.cursor = self.conn.cursor()
  
