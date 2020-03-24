@@ -31,6 +31,7 @@ class Yyk99Spider(scrapy.Spider):
     def parse3(self,response):
         res = Selector(response)
         item = YyItem()
+        item['id']=str(response.request.url).split("/")[4]
         locations = res.xpath("//div[@class='crumb']//a/text()").extract()
         if len(locations)==4:
             item['province'] = locations[1]
