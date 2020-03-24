@@ -34,7 +34,8 @@ class MysqlPipeline(object):
         insert into yy(id,province,city,region,name,level,character,contact) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)
         """
         # 执行插入数据到数据库操作
-        self.cursor.execute(insert_sql,(str(item['province']),str(item['city']),str(item['region']),str(item['name']),str(item['level']),str(item['character']),str(item['contact']))
+        self.cursor.execute(insert_sql,
+        (str(item['province']),str(item['city']),str(item['region']),str(item['name']),str(item['level']),str(item['character']),str(item['contact'])))
         # 提交，不进行提交无法保存到数据库
         self.conn.commit()
  
