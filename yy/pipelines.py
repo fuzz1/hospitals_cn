@@ -13,7 +13,7 @@ class YyPipeline(object):
         self.ws = self.wb.active
         self.ws.append(['省','市','区','名称','等级','性质','电话'])
     def process_item(self, item, spider):
-        line = [str(item['province']),str(item['city']),str(item['region']),str(item['name']),str(item['level']),str(item['character']),str(item['contact'])]
+        line = [str(item['province']),str(item['city']),str(item['region']),str(item['name']),str(item['level']),str(item['character']),str(item['contact']))]
         self.ws.append(line)
         self.wb.save("yyInfo.xlsx")
         return item
