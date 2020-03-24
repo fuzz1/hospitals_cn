@@ -11,6 +11,7 @@ import scrapy
 class YyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    id = scrapy.Field()
     #省
     province = scrapy.Field()
     #市
